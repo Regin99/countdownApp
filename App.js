@@ -1,45 +1,29 @@
 import React, { useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  Button,
-  StatusBar,
-  FlatList,
-} from "react-native";
+import { View, Text } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+import { SetDateScreen } from "./components/SetDateScreen";
+import { CountDownScreen } from "./components/CountDownScreen";
+import { AddCountDownScreen } from "./components/AddCountDownScreen";
+import { SetTimeScreen } from "./components/SetTimeScreen";
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const [text, setText] = useState("");
-  const [list, setList] = useState([]);
-
   return (
-    <View style={styles.container}>
-      <TextInput
-        value={text}
-        onChangeText={(inputText) => {
-          setText(inputText);
-          console.log(list);
-        }}
-        placeholder="Enter text"
-      />
-      <Button
-        title="Add"
-        onPress={() => {
-          setList([...list, text]);
-          setText("");
-        }}
-      />
-      <StatusBar barStyle="dark-content" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="CountDown">
+        <Stack.Screen
+          name="CountDown"
+          component={CountDownScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen name="SetDate" component={SetDateScreen} />
+        <Stack.Screen name="SetTime" component={SetTimeScreen} />
+        <Stack.Screen name="AddCountDown" component={AddCountDownScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
