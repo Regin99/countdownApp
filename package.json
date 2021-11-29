@@ -8,6 +8,8 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@expo-google-fonts/dev": "^0.2.0",
+    "@expo-google-fonts/oswald": "^0.2.0",
     "@react-native-async-storage/async-storage": "^1.15.9",
     "@react-native-community/datetimepicker": "^3.5.2",
     "@react-native-community/push-notification-ios": "^1.10.1",
@@ -15,6 +17,7 @@
     "@react-navigation/native-stack": "^6.1.0",
     "expo": "~42.0.1",
     "expo-cli": "^4.13.0",
+    "expo-font": "~9.2.1",
     "expo-notifications": "~0.12.3",
     "expo-permissions": "~12.1.1",
     "expo-status-bar": "~1.0.4",
@@ -27,7 +30,9 @@
     "react-native-safe-area-context": "3.2.0",
     "react-native-screens": "~3.4.0",
     "react-native-web": "~0.13.12",
-    "redux": "^4.1.1"
+    "redux": "^4.1.2",
+    "expo-app-loading": "1.1.2",
+    "react-native-svg": "12.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0"

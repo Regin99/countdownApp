@@ -1,12 +1,10 @@
-import React, { useState } from "react";
-import { View, Text } from "react-native";
+import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
-import { SetDateScreen } from "./components/SetDateScreen";
-import { CountDownScreen } from "./components/CountDownScreen";
-import { AddCountDownScreen } from "./components/AddCountDownScreen";
-import { SetTimeScreen } from "./components/SetTimeScreen";
+import { SetDateScreen } from "./src/screens/SetDateScreen";
+import { CountDownScreen } from "./src/screens/CountDownScreen";
+import { AddCountDownScreen } from "./src/screens/AddCountDownScreen";
+import { SetTimeScreen } from "./src/screens/SetTimeScreen";
 const Stack = createNativeStackNavigator();
 
 export default function App() {

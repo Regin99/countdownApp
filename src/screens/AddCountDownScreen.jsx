@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, TextInput, Text, Button } from "react-native";
-import { ColorsContainer } from "./ColorsContainer";
+import { ColorsContainer } from "../components/ColorsContainer";
 
 const COLORS = [
   {
