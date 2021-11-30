@@ -67,6 +67,6 @@ const styles = StyleSheet.create({
     textShadowColor: "black",
 
     fontSize: 20,
-    color: "#fff",
+    color: "#f2f2f2",
   },
 });

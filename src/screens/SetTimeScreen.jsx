@@ -8,7 +8,7 @@ export const SetTimeScreen = ({ route, navigation }) => {
   const [modalVisible, setModalVisible] = useState(false);
   console.log(date);
   return (
-    <View>
+    <View style={styles.container}>
       <Modal
         animationType="slide"
         transparent={true}
@@ -31,6 +31,8 @@ export const SetTimeScreen = ({ route, navigation }) => {
         value={time}
         mode="time"
         display={"spinner"}
+        themeVariant="dark"
+        textColor="#f2f2f2"
         onChange={(event, time) => {
           setTime(time);
         }}
@@ -50,6 +52,12 @@ export const SetTimeScreen = ({ route, navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#262626",
+    justifyContent: "space-evenly",
+    height: "100%",
+  },
+
   centeredView: {
     flex: 1,
     justifyContent: "center",

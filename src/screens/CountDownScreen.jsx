@@ -63,7 +63,10 @@ export const CountDownScreen = ({ route, navigation }) => {
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             <Text style={styles.modalText}>Are you sure?</Text>
-            <View style={{ flexDirection: "row" }}>
+            <View
+              style={{
+                flexDirection: "row",
+              }}>
               <Pressable
                 style={[styles.button, styles.buttonClose]}
                 onPress={() => setModalVisible(!modalVisible)}>
@@ -120,7 +123,7 @@ export const CountDownScreen = ({ route, navigation }) => {
         <AddButton width={70} height={70} />
       </TouchableOpacity>
 
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="light-content" />
     </View>
   );
 };
@@ -129,7 +132,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "row",
-    backgroundColor: "#fff",
+    backgroundColor: "#262626",
     alignItems: "center",
     justifyContent: "center",
   },

@@ -18,9 +18,39 @@ export default function App() {
             headerShown: false,
           }}
         />
-        <Stack.Screen name="SetDate" component={SetDateScreen} />
-        <Stack.Screen name="SetTime" component={SetTimeScreen} />
-        <Stack.Screen name="AddCountDown" component={AddCountDownScreen} />
+        <Stack.Screen
+          name="SetDate"
+          component={SetDateScreen}
+          options={{
+            headerStyle: {
+              backgroundColor: "#343434",
+            },
+            headerTintColor: "#f2f2f2",
+            headerTitle: "Select Date",
+          }}
+        />
+        <Stack.Screen
+          name="SetTime"
+          options={{
+            headerStyle: {
+              backgroundColor: "#343434",
+            },
+            headerTintColor: "#f2f2f2",
+            headerTitle: "Select Time",
+          }}
+          component={SetTimeScreen}
+        />
+        <Stack.Screen
+          name="AddCountDown"
+          options={{
+            headerStyle: {
+              backgroundColor: "#343434",
+            },
+            headerTintColor: "#f2f2f2",
+            headerTitle: "Add CountDown",
+          }}
+          component={AddCountDownScreen}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
